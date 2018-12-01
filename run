@@ -1,0 +1,24 @@
+#!/bin/sh
+start=$(date +%s) 
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+buildDockerImage(){
+    docker build -t 9d77v/$1:$2  -f $1/$2/Dockerfile .
+    docker push 9d77v/$1:$2
+}
+case $1 in 
+    -h|--help)
+        echo -e "${GREEN}usage: ./run [-h][--help]"
+        printf "  ${GREEN}%-15s${NC}%-30s\n" "go|node [version]" "node develop image"
+        ;;
+    node|go) 
+        buildDockerImage $1 $2
+        ;;
+    *)
+        echo "get help by ./run -h or ./run --help"
+        ;;
+esac  
+end=$(date +%s)
+time=$(( $end - $start ))  
+echo -e "${GREEN}Done${NC} in $time s."
