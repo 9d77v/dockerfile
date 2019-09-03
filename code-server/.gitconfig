@@ -1,0 +1,10 @@
+[alias]
+    co = checkout
+    com =checkout master
+    ci = commit -m
+    br = branch
+    st = status
+    rbm = rebase master
+[user]
+        email = 9d77v@9d77v.me
+        name = 9d77v

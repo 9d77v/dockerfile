@@ -25,3 +25,5 @@ RUN cd /root \
     && export DEBIAN_FRONTEND=noninteractive \
     && apt install tzdata \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+COPY .gitconfig /root/.gitconfig
