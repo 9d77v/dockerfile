@@ -7,5 +7,5 @@ else
     SUDO=""
 fi
 
-$SUDO docker build -t 9d77v/code-server:2.preview.11-vsc1.37.0 .
-$SUDO docker push 9d77v/code-server:2.preview.11-vsc1.37.0
+$SUDO docker build -t 9d77v/code-server:2.1472-vsc1.38.1 .
+$SUDO docker push 9d77v/code-server:2.1472-vsc1.38.1
