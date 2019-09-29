@@ -35,7 +35,7 @@ function rp
     iptables -t nat -A PREROUTING -p tcp --dport 7000 -j REDIRECT --to-ports $argv[1]
 end
 
-echo "Welcome to use 9d77v's go 1.11.2 image, happy go programing!"
+echo "Welcome to use 9d77v's go 1.13.1 image, happy go programing!"
 
 if test -e ss.conf
     echo 'ss.conf found,use proxy'
