@@ -1,4 +1,4 @@
-FROM codercom/code-server:2.1472-vsc1.38.1
+FROM codercom/code-server:2.1544-vsc1.38.1
 
 USER root
 
@@ -15,7 +15,7 @@ RUN apt update \
     && apt install gcc make build-essential python-dev python-setuptools python-pip python-smbus build-essential libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev libssl-dev openssl libffi-dev -y \
     #Go Environment
     && cd /root \
-    && curl https://dl.google.com/go/go1.12.9.linux-amd64.tar.gz -o go.tar.gz \
+    && curl https://dl.google.com/go/go1.13.linux-amd64.tar.gz -o go.tar.gz \
     && tar -xzvf go.tar.gz  \
     && rm -r go.tar.gz \
     && mkdir /home/coder/go \
