@@ -24,10 +24,12 @@ RUN mv /tmp/repositories /etc/apk/repositories \
     && echo "Asia/Shanghai" >  /etc/timezone \
     && apk del tzdata 
 
-# add glibc 
+# add c++
+RUN apk add --no-cache gcc musl-dev g++ make libuuid
+
+# # add glibc 
 RUN apk --no-cache add ca-certificates wget \
     && wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub \
-    && wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.30-r0/glibc-2.30-r0.apk \
-    && apk add glibc-2.30-r0.apk
-# add c++
-RUN apk add --no-cache gcc musl-dev g++ make
+    && wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.30-r0/glibc-dev-2.30-r0.apk \
+    && apk add glibc-dev-2.30-r0.apk
+    
