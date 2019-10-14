@@ -12,7 +12,7 @@ case $1 in
         echo -e "${GREEN}usage: ./run [-h][--help]"
         printf "  ${GREEN}%-15s${NC}%-30s\n" "go|node [version]" "node develop image"
         ;;
-    node|go|python) 
+    node|go|python|cpp) 
         buildDockerImage $1 $2
         ;;
     *)
