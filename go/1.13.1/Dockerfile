@@ -39,3 +39,5 @@ EXPOSE 7000 7001 7002
 
 COPY go/1.13.1/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
+
+ENV GOPROXY=https://goproxy.cn
