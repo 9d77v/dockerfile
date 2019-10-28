@@ -4,7 +4,8 @@ ENV CGO_ENABLED=0
 COPY ./core-files /tmp
 
 # add some tools
-RUN mv /tmp/repositories /etc/apk/repositories \
+RUN echo "http://mirrors.aliyun.com/alpine/v3.10/main/" > /etc/apk/repositories \
+    && echo "http://mirrors.aliyun.com/alpine/v3.10/community/" >> /etc/apk/repositories \
     && mv /tmp/ss-local-1.2.1 /bin/ss-local \
     && apk add --no-cache \
     curl \
@@ -37,7 +38,7 @@ RUN curl -O https://get.docker.com/builds/Linux/x86_64/docker-latest.tgz \
 
  # 安装 go 库
 RUN go get -u github.com/golang/protobuf/protoc-gen-go \
-    && go get -u golang.org/x/lint/golint
+    && go get -u golang.org/x/lint/golint 
 
 COPY my.fish /root/.config/fish/conf.d/my.fish
 
