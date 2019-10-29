@@ -36,6 +36,17 @@ RUN curl -O https://get.docker.com/builds/Linux/x86_64/docker-latest.tgz \
  && cp docker/docker /usr/local/bin/ \
  && rm -rf docker docker-latest.tgz
 
+# 安装docker-compose
+RUN  apk add --no-cache \
+    py-pip \
+    python-dev \
+    libffi-dev \
+    openssl-dev \
+    gcc \
+    libc-dev \
+    make \
+    && pip install docker-compose
+
  # 安装 go 库
 RUN go get -u github.com/golang/protobuf/protoc-gen-go \
     && go get -u golang.org/x/lint/golint 
