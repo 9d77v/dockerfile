@@ -11,5 +11,5 @@ fi
 #     # && https://github.com/ClickHouse/ClickHouse/blob/master/programs/server/config.xml \
 #     # && https://github.com/ClickHouse/ClickHouse/blob/master/programs/server/users.xml \
     # && cd ..
-$SUDO docker build -t 9d77v/clickhouse-server:arm64.2020-08-05 .
-$SUDO docker push 9d77v/clickhouse-server:arm64.2020-08-05
+$SUDO docker build -t 9d77v/clickhouse-server:arm64.2020-09-05 .
+$SUDO docker push 9d77v/clickhouse-server:arm64.2020-09-05
