@@ -7,5 +7,5 @@ else
     SUDO=""
 fi
 
-$SUDO docker build -t 9d77v/caddy:2.5.2-alpine .
-$SUDO docker push 9d77v/caddy:2.5.2-alpine
+$SUDO docker build -t 9d77v/jenkins:lts-jdk17 .
+$SUDO docker push 9d77v/jenkins:lts-jdk17
