@@ -7,5 +7,5 @@ else
     SUDO=""
 fi
 
-$SUDO docker build -t 9d77v/caddy:2.7.4-alpine .
-$SUDO docker push 9d77v/caddy:2.7.4-alpine
+$SUDO docker build -t 9d77v/elasticsearch:8.9.2 .
+$SUDO docker push 9d77v/elasticsearch:8.9.2
