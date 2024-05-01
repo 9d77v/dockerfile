@@ -7,5 +7,5 @@ else
     SUDO=""
 fi
 
-$SUDO docker build -t 9d77v/jenkins:lts-jdk17 .
-$SUDO docker push 9d77v/jenkins:lts-jdk17
+$SUDO docker build -t 9d77v/jenkins:2.456-jdk21 .
+$SUDO docker push 9d77v/jenkins:2.456-jdk21
